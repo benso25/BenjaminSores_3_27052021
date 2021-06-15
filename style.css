@@ -160,6 +160,20 @@ header{
     margin-top: 10%;
 }
 
+.new{
+    position: relative;
+    top: 18%;
+    left: 66%;
+    width: 80px;
+    background-color: #99E2D0;
+    color: #2a947a;
+    margin-left: 17px;
+    text-align: center;
+    height: 21px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
 .Cards{
     display: flex;
     justify-content: space-around;
@@ -203,28 +217,27 @@ header{
     left: 87%;
     bottom: 24%;
     font-size: 22px;
-    width: 2%;
 }
 
 .empty{
-    position: relative;
-    left: 87%;
-    bottom: 24%;
-    font-size: 22px;
-    width: 2%;
     opacity: 1;
+    position: relative;
+    left: 2%;
+    bottom: 28%;
+    font-size: 22px;
 }
+
 
 .full{
     position: relative;
-    left: 24%;
-    bottom: 24%;
-    font-size: 22px;
-    width: 2%;
+    left: -7%;
+    font-size: 24px;
     opacity: 0;
-    transform: scale(0);
-    background: linear-gradient(to bottom,  #9356DC, #FF79DA);
+    background: linear-gradient(to bottom, #9356DC, #FF79DA);
+    
 }
+
+
 footer{
     width: 100%;
     height: 200px;
@@ -439,6 +452,70 @@ footer span{
     }
 }
 
+@media screen and (min-width:1440px){
+
+    .img_header{
+        margin: -10px 33%;
+    }
+
+    .text_loc{
+        margin-left: 38%;
+    }
+    .Exploration h1{
+        margin-left: 15%;
+    }
+
+    .Exploration h3{
+        margin-left: 10%;
+    }
+
+    input{
+        margin-left: 42%;
+    }
+
+    .Explication p{
+        width: 209px;
+    }
+
+    .Explication h1{
+        margin-right: 36%;
+        margin-left: 36%;
+        margin-top: -1%;
+        margin-bottom: 1%;
+
+    }
+
+    .Restaurants h1{
+        margin-top: 2%;
+        margin-left: 44%;
+    }
+
+    .Restaurants{
+        width: 67%;
+        margin-left: 0;
+    }
+
+    footer{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    footer h1{
+        margin-left: 0%;
+    }
+
+    .link_footer{
+        margin-top: 3%;
+    }
+
+    .title{
+        font-size: 22px;
+        margin-top: 1%;
+    }
+
+}
+
 
 
                                                             /**restaurants**/
@@ -501,6 +578,25 @@ header .arrow i{
     left: -15px;
     bottom: -25px;
     font-size: 22px;
+}
+
+.title_heart .empty{
+    opacity: 1;
+    position: relative;
+    left: 25%;
+    bottom: 1%;
+    font-size: 22px;
+
+}
+
+
+.title_heart .full{
+    position: relative;
+    left: -29%;
+    font-size: 24px;
+    opacity: 0;
+    background: linear-gradient(to bottom, #9356DC, #FF79DA);
+    
 }
 
 .menu .food{
@@ -638,6 +734,96 @@ header .arrow i{
     }
 
 }
+
+@media screen and (min-width: 1024px) and (max-width: 1440px){
+    header.header{
+        margin-bottom: 24px;
+        margin-top: 26px;
+    }
+
+    .img_header_restaurant{
+        max-width: 48%;
+        margin: -24px 27%;
+    }
+    
+    header .arrow i{
+        text-decoration: none;
+        color:#353535;
+        margin-top: 0%;
+        margin-left: 4%;
+    }
+
+    .menu h1{
+        margin-left: 29%;
+        margin-right: 23%;
+    }
+
+    .title_heart{
+        left: -416px;
+        bottom: -21px;
+    }
+    
+    .starters, .main, .desserts{
+        width: 34%;
+    }
+
+    .desserts{
+        margin-left: 22%;
+    }
+
+    .order{
+        margin-left: -57%;
+        margin-top: 38%;
+        margin-bottom: 3%;
+        margin-right: 32% ;
+    }
+
+}
+
+@media screen and (min-width: 1440px){
+    header.header{
+        margin-bottom: 24px;
+        margin-top: 26px;
+    }
+
+    .img_header_restaurant{
+        max-width: 48%;
+        margin: -24px 27%;
+    }
+    
+    header .arrow i{
+        text-decoration: none;
+        color:#353535;
+        margin-top: 0%;
+        margin-left: 4%;
+    }
+
+    .menu h1{
+        margin-left: 29%;
+        margin-right: 23%;
+    }
+
+    .title_heart{
+        left: -416px;
+        bottom: -21px;
+    }
+    
+    .starters, .main, .desserts{
+        width: 34%;
+    }
+
+    .desserts{
+        margin-left: 22%;
+    }
+
+    .order{
+        margin-left: -57%;
+        margin-top: 38%;
+        margin-bottom: 3%;
+        margin-right: 32% ;
+    }
+
+}
 /*********************************************************zone tests   animations******************************************************************/
 
                                                             /*test menu défilant*/
@@ -691,6 +877,7 @@ input:hover{
     margin-left: 17px;
 }
 
+
 .checked:hover{
     opacity: 1;
     transform: rotate(360deg);
@@ -698,14 +885,11 @@ input:hover{
 }
 
 .description:hover{
-        width: 70%;
+        width: 75%;
+        overflow: hidden;
         transition: width 800ms ease-in-out;
     }
 
-.prix:hover{
-        transform: translateX(-75px);
-        transition: transform 800ms ease-in-out;
-    }
 
                                     /*test coeur*/
 
@@ -715,5 +899,5 @@ input:hover{
 
 .full:hover{
     opacity: 1;
-
+    /*color:#FF79DA;*/
 }
