@@ -452,10 +452,6 @@ footer {
     float: left; 
     padding: 5px; 
     color: black;
-        & :hover{
-        cursor: pointer;
-        color: $colour-primary;  
-    }
 }
 
 .section__title {

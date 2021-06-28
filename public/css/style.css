@@ -397,10 +397,6 @@ footer li i {
   padding: 5px;
   color: black;
 }
-.arrow :hover {
-  cursor: pointer;
-  color: #9356DC;
-}
 
 .section__title h1 {
   font-family: "Shrikand", cursive;
