@@ -1,28 +1,28 @@
 //variables
-$couleur-primaire: #9356DC;
-$couleur-secondaire: #FF79DA;
-$couleur-tertiaire: #99E2D0;
-$grisclair: #F6F6F6; 
-$grismoyen: #D5D5D5;
-$grisfonce: #353535;
+$colour-primary: #9356DC;
+$colour-secondary: #FF79DA;
+$color-third: #99E2D0;
+$light: #F6F6F6; 
+$shadow:#c9c9c9;
+$dark: #353535;
 
 //polices
-@font-face {
-    font-family: 'Shrikhand-Regular';
-    src:url('../font/Shrikhand-Regular.ttf.woff') format('woff'),
-        url('../font/Shrikhand-Regular.ttf.svg#Shrikhand-Regular') format('svg'),
-        url('../font/Shrikhand-Regular.ttf.eot'),
-        url('../font/Shrikhand-Regular.ttf.eot?#iefix') format('embedded-opentype');}
+// @font-face {
+//     font-family: 'Shrikhand-Regular';
+//     src:url('../fonts/Shrikhand-Regular.ttf.woff') format('woff'),
+//         url('../fonts/Shrikhand-Regular.ttf.svg#Shrikhand-Regular') format('svg'),
+//         url('../fonts/Shrikhand-Regular.ttf.eot'),
+//         url('../fonts/Shrikhand-Regular.ttf.eot?#iefix') format('embedded-opentype');}
 
-@font-face {
-    font-family: 'Roboto-Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: url('../font/Roboto-Regular.woff') format('woff');
-}    
+// @font-face {
+//     font-family: 'Roboto-Regular';
+//     font-style: normal;
+//     font-weight: normal;
+//     src: url('../fonts/Roboto') format('ttf');
+// }    
 
-$font-texte: 'Roboto-Regular';
-$font2: 'Shrikhand-Regular';
+// $font-texte: 'Roboto-Regular';
+// $font2: 'Shrikhand-Regular';
 
 //page
 
@@ -37,7 +37,7 @@ $font2: 'Shrikhand-Regular';
 .loading_title {
     text-align: center;
     font-size: 30px;
-    font-family: 'Shrikhand-Regular';
+    font-family: 'Shrikhand','cursive';
     padding-top: 15px;
 }
 
@@ -64,14 +64,14 @@ $font2: 'Shrikhand-Regular';
 .loader,
 .loader:before,
 .loader:after {
-  background: $couleur-tertiaire;
+  background: $color-third;
   -webkit-animation: load1 1s infinite ease-in-out;
   animation: load1 1s infinite ease-in-out;
   width: 1em;
   height: 4em;
 }
 .loader {
-  color: $couleur-secondaire;
+  color: $colour-secondary;
   text-indent: -9999em;
   margin: 88px auto;
   position: relative;
@@ -164,13 +164,13 @@ $font2: 'Shrikhand-Regular';
 //Localisation
 
 .Localisation {
-    font-family: $font-texte;
+    font-family: 'Roboto', sans-serif;
     .Localisation__text{
         font-size: 1em;
-        color: $grisfonce;
+        color: $dark;
         text-align: center;
-        background-color: darken($grisclair, 5);
-        box-shadow: inset 0 2.5px 3px $grismoyen;
+        background-color: darken($light, 5);
+        box-shadow: inset 0 2.5px 3px $shadow;
         padding: 7px;
         i {
             padding-right: 10px;
@@ -194,8 +194,8 @@ $font2: 'Shrikhand-Regular';
 //Présentation du site
 
 .Exploration{
-    font-family: $font-texte;
-    background-color: $grisclair;
+    font-family: 'Roboto', sans-serif;
+    background-color: $light;
     align-content: center;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -219,9 +219,10 @@ $font2: 'Shrikhand-Regular';
         height: 50px;
         padding-top: 15px;
         input {
-        background-image: linear-gradient(to bottom right, $couleur-secondaire, $couleur-primaire);
+        background-image: linear-gradient(to bottom right, $colour-secondary, $colour-primary);
         border-radius: 50px;
-        box-shadow: 3px 5px 7px $grismoyen;
+        border: none;
+        // box-shadow: 3px 5px 7px $shadow;
         padding: 15px 20px;
         color: white;
         text-decoration: none;
@@ -229,13 +230,15 @@ $font2: 'Shrikhand-Regular';
         }
 
 .Exploration__btn input:hover {
-    box-shadow: 5px 7px 9px $grisfonce;
+    box-shadow: 7px 7px 9px $shadow;
+    background: linear-gradient(to top left, #eca6e6, #ce98ee);
+    cursor: pointer;
 }
     }
 //Mode d'emploi
 
 .Explication {
-    font-family: $font-texte;
+    font-family: 'Roboto', sans-serif;
     h1 {
         padding: 30px 20px 20px;
     }
@@ -252,9 +255,9 @@ $font2: 'Shrikhand-Regular';
     align-items: center;
     width: 100%;
     height: 65px;
-    background-color: $grisclair;
+    background-color: $light;
     border-radius: 15px;
-    box-shadow: 1px 2px 11px $grismoyen;
+    box-shadow: 1px 2px 11px $shadow;
     margin: 0 0 30px 0;
     position: relative;
     cursor: pointer;
@@ -264,7 +267,7 @@ $font2: 'Shrikhand-Regular';
         height: 23px;
         color: white;
         text-align: center;
-        background-color: $couleur-primaire;
+        background-color: $colour-primary;
         border-radius: 25px;
         position: absolute;
         line-height: 24px;
@@ -272,7 +275,7 @@ $font2: 'Shrikhand-Regular';
     }
     i {
         width: 15px;
-        color: $grisfonce;
+        color: $dark;
         padding: 0 10px 0 30px;
     }
     p {
@@ -280,9 +283,11 @@ $font2: 'Shrikhand-Regular';
         padding-left: 20px;
     }
     &:hover {
-        background-color: rgba(147, 86, 220,0.15);
+        color: #5fceb2;
+        background-color: $light;
         i {
-            color: $couleur-primaire;
+            font-size: 25px;
+            color: $colour-primary;
         }
     }
 }
@@ -290,8 +295,8 @@ $font2: 'Shrikhand-Regular';
 //Restaurants
 
 .Restaurants {
-    font-family: $font-texte;
-    background-color: $grisclair;
+    font-family: 'Roboto', sans-serif;
+    background-color: $light;
     margin-bottom: 30px;
     h1 {
         padding: 30px 20px 0;
@@ -311,7 +316,7 @@ $font2: 'Shrikhand-Regular';
 .Cards {
     background-color: white;
     border-radius: 15px;
-    box-shadow: 3px 5px 5px $grismoyen;
+    box-shadow: 3px 5px 5px $shadow;
     width: 100%;
     height: 265px;
     margin-bottom: 25px;
@@ -337,13 +342,13 @@ $font2: 'Shrikhand-Regular';
         padding-bottom: 0;
         margin: 5px 0 0;
     }
-        &--nouveau {
+        &--new {
             width: 85px;
             line-height: 30px;
             border-radius: 3px;
-            background-color: #99E2D0;
+            background-color: $color-third;
             font-size: 15px;
-            color: #2a947a;
+            color: #008766;
             text-align: center;
             position: absolute;
             margin-top: 10px;
@@ -367,7 +372,7 @@ $font2: 'Shrikhand-Regular';
         bottom: 20px;
         font-size: 25px;
         transform: scale(0);
-        background:linear-gradient(to bottom, $couleur-primaire, $couleur-secondaire);
+        background:linear-gradient(to bottom, $colour-primary, $colour-secondary);
     }
     &:hover {
         .empty {
@@ -386,12 +391,12 @@ $font2: 'Shrikhand-Regular';
 //footer
 
 footer {
-    font-family: $font-texte;
+    font-family: 'Roboto', sans-serif;
     color: white;
-    background-color: $grisfonce;
+    background-color: $dark;
     padding: 20px 20px 30px 20px;
     h1 {
-        font-family: $font2;
+        font-family: 'Shrikand', cursive;
         margin-bottom: 15px;
         font-weight: normal;
         font-size: 20px,
@@ -433,11 +438,11 @@ footer {
         }
     }
 
-    .menu__element {
+    .menu__section {
         width: 100%;
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
-        background-color: $grisclair;
+        background-color: $light;
         padding: 20px;
         margin-top: -35px;
     }
@@ -446,12 +451,16 @@ footer {
 .arrow {
     float: left; 
     padding: 5px; 
-    color: black
+    color: black;
+        & :hover{
+        cursor: pointer;
+        color: $colour-primary;  
+    }
 }
 
-.element__titre {
+.section__title {
     h1 {
-        font-family: $font2;
+        font-family: 'Shrikand', cursive;
         padding-bottom: 25px;
     }
     .empty {
@@ -469,7 +478,7 @@ footer {
         font-size: 25px;
         padding-top: 6px;
         transform: scale(0);
-        background:linear-gradient(to bottom, $couleur-primaire, $couleur-secondaire);
+        background:linear-gradient(to bottom, $colour-primary, $colour-secondary);
     }
     &:hover {
         .empty {
@@ -485,23 +494,24 @@ footer {
     } 
 }
 
-.element__carte {
-    font-family: $font-texte;
+.section__card {
+    font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
-    .carte__bloc {
+    .card{
         width:100%;
         padding-bottom: 20px;
         h2 {
             text-transform: uppercase;
-            border-bottom : 3px solid $couleur-tertiaire;
+            border-bottom : 3px solid $color-third;
             margin-bottom : 10px;
             max-width : 50px;
             overflow-x : visible;
             font-size: 1.3em;
+            font-weight: 300;
             &:after {
                 display: block;
-                background: none repeat scroll 0 0 $couleur-tertiaire;
+                background: none repeat scroll 0 0 $color-third;
                 position: relative;
                 width: 50px;
                 height: 3px;
@@ -509,18 +519,18 @@ footer {
         }
     }
 
-.carte__container {
+.card__container {
     display: flex; 
     margin: 0;
     flex-direction: column;
-    .carte__objet {
-        .objet__btn {
+    .card__menu {
+        .menu__btn {
             background-color: white;
             border-radius: 15px;
             display: block;
             min-height: 60px;
             width: 100%;
-            box-shadow: 5px 5px 15px $grismoyen;
+            box-shadow: 5px 5px 15px $shadow;
             cursor: pointer;
             margin-bottom: 17px;
             h3 {
@@ -535,7 +545,7 @@ footer {
             }
         }
 
-        .objet__prix {
+        .menu__prix {
             position:absolute;
             bottom: 15px;
             height: 100%;
@@ -544,7 +554,7 @@ footer {
             padding: 20px 20px 0 20px;            
         }
 
-        .btn__hover {
+        .menu__hover {
             display: block;
             font-size: 1.1em;
             color: white;
@@ -553,15 +563,18 @@ footer {
             padding: 10px 0;
             width: 55px;
             line-height: 40px;
-            background-color: $couleur-tertiaire;
+            background-color: $color-third;
             border-top-right-radius: 15px;
             border-bottom-right-radius: 15px;
         }
     }
 }
+}
 
 
-.commander {
+.order {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
     text-align: center;
     width: 250px;
     color: white;
@@ -569,25 +582,26 @@ footer {
     line-height: 45px;
     margin: 25px auto 40px auto;
     position: relative;
-    box-shadow : 5px 5px 7px $grismoyen;
-    background-color: $couleur-primaire;
+    box-shadow : 5px 5px 7px $shadow;
+    background-color: $colour-primary;
     z-index: 1;
     border-radius: 55px;
-    background-image: linear-gradient(to bottom right, $couleur-secondaire, $couleur-primaire);
+    background: linear-gradient(to bottom right, $colour-secondary, $colour-primary);
     a {
        padding: 20px 55px;
        text-decoration: none;
        color: white;
     }
 }
+
+
+.order:hover {
+    box-shadow: 7px 7px 9px $shadow;
+    background: linear-gradient(to top left, #eca6e6, #ce98ee);
 }
 
-.commander:hover {
-    box-shadow: 7px 7px 9px $grisfonce;
-}
 
-
-.objet__btn {
+.menu__btn {
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -600,70 +614,76 @@ footer {
 
  
 
-    .objet__prix {
+    .menu__prix {
         right: 20px;
         bottom: 0px;
         transition: 400ms;
     }
-    .btn__hover {
+    .menu__hover {
         position: absolute;
         right: 0;
         top: 0;
         transform: translateX(55px);
         transition: 400ms; 
     }
-    .objet__btn:hover {
+    .menu__btn:hover {
         .objet__btn h3 {
             width: 70%;
             transition: width 500ms ease-in-out;
         }
-        .objet__prix {
+        .menu__prix {
             transform: translateX(-45px);
             transition: transform 500ms ease-in-out;
         }
-        .btn__hover {
+        .menu__hover {
             transform: translateX(0px);
             transition: transform 500ms ease-in-out;
         }
-        .btn__hover > i {
+        .menu__hover > i {
             transform: rotate(360deg);
             transition: transform 500ms ease-in-out;
         }
-        .objet__caption {
+        .menu__text {
             width: calc(100% - 50px);
         }
     }
 
-.objet__caption {
+.menu__text {
     width: 100%;
     transition: width 500ms ease-in-out;
 }
     //animation affichage menus
 
-.element__carte {
-    .carte__container {
-        .carte__objet { 
-            animation: fadetoshow 0.4s; 
+.section__card {
+    .card__container {
+        .card__menu { 
+            animation-name: slide;
+            animation-duration: 0.9s;
             animation-fill-mode: forwards;
             opacity: 0;
             animation-timing-function: ease-in-out;
         }
-        .carte__objet:nth-child(2) { 
-            -webkit-animation-delay: 0.2s; 
+        .card__menu:nth-child(2) { 
+            -webkit-animation-delay:0.2s; 
             animation-delay: 0.2s;
         }
-        .carte__objet:nth-child(3) { 
+        .card__menu:nth-child(3) { 
             -webkit-animation-delay: 0.4s;
             animation-delay: 0.4s;
         }
     }
 }
     
-    @-webkit-keyframes fadetoshow {
+    @-webkit-keyframes slide {
       0% {
         opacity: 0; 
         margin-top: 5px; 
         margin-bottom: 0px; 
+      }
+      50% {
+          opacity: 0.5;
+          margin-top: 2.5px;
+          margin-bottom: 2.5px;
       }
       100% {
         opacity: 1; 
@@ -672,11 +692,16 @@ footer {
       }
     }
     
-    @keyframes fadetoshow {
+    @keyframes slide {
       0% {
         opacity: 0;
         margin-top: 5px;
         margin-bottom: 0px;
+      }
+      50%{
+          opacity: 0.5;
+          margin-top: 2.5px;
+          margin-bottom: 2.5px;
       }
       100% {
         opacity: 1;
@@ -689,13 +714,13 @@ footer {
     //responsive 
 
     @media only screen and (min-width: 992px) {
-        .restaurants{
-            h3 {
+        .Restaurants{
+            h1 {
                 padding-bottom: 15px;
                 text-align: center;
                 font-size: 30px;
             }
-        .restaurants__conteneur {
+        .Restaurants__conteneur {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -706,12 +731,12 @@ footer {
         }
     }
 
-        .fonctionnement 
-        .fonctionnement__site {
+        .Explication 
+        .Explication__choix {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            .site__btn {
+            .Choix__btn {
                 width: calc(33.33% - 34px);
             }
         }
@@ -729,20 +754,20 @@ footer {
             }
         }
 
-        .element__carte {
-            .carte--responsive {
+        .section__card {
+            .card--responsive {
                 display:flex;
                 justify-content: space-between;
             }
         }
 
-        .carte__container{
-            .objet__btn {
+        .card__container{
+            .menu__btn {
                 width: 90%;
             }
         }
 
-        .element__carte .carte__bloc {
+        .section__card .card {
             width: calc( 33.33% - 16px );
             padding-bottom: 20px;
           }
