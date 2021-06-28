@@ -1,0 +1,11 @@
+{
+  "name": "benjaminsores_3_27052021",
+  "version": "1.0.0",
+  "description": "P3",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
