@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,9 +10,12 @@
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  animation: spin linear 5s;
+  animation: spin linear 4s;
   z-index: 100;
   margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
   visibility: hidden;
 }
 
@@ -33,12 +35,12 @@
     opacity: 0;
     visibility: hidden;
     z-index: -2;
-    transform: translateX(-1000px);
+    transform: translateX(-1000px) 0s;
   }
 }
 .page_content {
   animation-name: loading;
-  animation-duration: 5s;
+  animation-duration: 6.5s;
 }
 
 @keyframes loading {
@@ -47,6 +49,7 @@
   }
   50% {
     visibility: hidden;
+    opacity: 0.5;
   }
   100% {
     visibility: visible;
@@ -59,7 +62,7 @@
   position: relative;
 }
 .header__img img {
-  width: 355px;
+  width: 275px;
 }
 
 .Localisation {
@@ -69,7 +72,7 @@
   font-size: 1em;
   color: #353535;
   text-align: center;
-  background-color: #e9e9e9;
+  background-color: #eaeaea;
   box-shadow: inset 0 2.5px 3px #c9c9c9;
   padding: 7px;
 }
@@ -88,6 +91,9 @@
   padding-left: 15px;
   background-color: #EAEAEA;
   width: 150px;
+}
+.Localisation .Localisation__text input::placeholder {
+  color: black;
 }
 
 .Exploration {
@@ -124,7 +130,9 @@
   text-decoration: none;
 }
 .Exploration .Exploration__btn input:hover {
-  box-shadow: 7px 7px 9px #c9c9c9;
+  transform: scale(1.02);
+  transition: ease 0.5s;
+  box-shadow: 7px 7px 9px #353535;
   background: linear-gradient(to top left, #eca6e6, #ce98ee);
   cursor: pointer;
 }
@@ -152,7 +160,6 @@
   box-shadow: 1px 2px 11px #c9c9c9;
   margin: 0 0 30px 0;
   position: relative;
-  cursor: pointer;
 }
 .Choix__btn .number {
   font-size: 16px;
@@ -174,14 +181,6 @@
 .Choix__btn p {
   font-weight: 500;
   padding-left: 20px;
-}
-.Choix__btn:hover {
-  color: #5fceb2;
-  background-color: #F6F6F6;
-}
-.Choix__btn:hover i {
-  font-size: 25px;
-  color: #9356DC;
 }
 
 .Restaurants {
@@ -213,6 +212,10 @@
   position: relative;
   display: flex;
   flex-direction: column;
+}
+.Cards:hover {
+  transform: scale(1.04);
+  transition: ease 0.5s;
 }
 .Cards img {
   width: 100%;
@@ -251,7 +254,6 @@
   right: 30px;
   bottom: 20px;
   font-size: 25px;
-  fill-opacity: 0;
   opacity: 1;
   color: black;
 }
@@ -271,7 +273,6 @@
   transition: transform 500ms ease-in-out;
   transform-origin: bottom center;
   background-clip: text;
-  /*définit la façon dont l'image (ou la couleur) s'étend sous la boîte de bordure, la boîte de remplissage ou la boîte de contenu*/
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -296,12 +297,13 @@ footer li {
   padding: 3px 0;
   list-style-type: none;
 }
+footer li:hover {
+  transform: scale(1.02);
+  transition: ease 0.5s;
+}
 footer li a {
   color: white;
   text-decoration: none;
-}
-footer li a:visited {
-  color: white;
 }
 footer li i {
   color: white;
@@ -387,7 +389,6 @@ footer li i {
   border-bottom: 3px solid #99E2D0;
   margin-bottom: 10px;
   max-width: 50px;
-  overflow-x: visible;
   font-size: 1.3em;
   font-weight: 300;
 }
@@ -395,6 +396,10 @@ footer li i {
   display: flex;
   margin: 0;
   flex-direction: column;
+}
+.section__card .card__container .card__menu:hover {
+  transform: scale(1.02);
+  transition: ease 0.5s;
 }
 .section__card .card__container .card__menu .menu__btn {
   background-color: white;
@@ -417,6 +422,7 @@ footer li i {
   padding: 0 60px 10px 10px;
 }
 .section__card .card__container .card__menu .menu__prix {
+  font-weight: 500;
   position: absolute;
   bottom: 15px;
   height: 100%;
@@ -461,7 +467,9 @@ footer li i {
 }
 
 .order:hover {
-  box-shadow: 7px 7px 9px #c9c9c9;
+  transform: scale(1.02);
+  transition: ease 0.5s;
+  box-shadow: 7px 7px 9px #353535;
   background: linear-gradient(to top left, #eca6e6, #ce98ee);
 }
 
@@ -515,40 +523,58 @@ footer li i {
   transition: width 500ms ease-in-out;
 }
 
+.section__card .card {
+  animation-name: slide;
+  animation-duration: 2s;
+}
 .section__card .card__container .card__menu {
   animation-name: slide;
-  animation-duration: 0.9s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-  animation-timing-function: ease-in-out;
+  animation-delay: 0.5s;
+  animation-duration: 2s;
 }
-.section__card .card__container .card__menu:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.section__card .card__container .card__menu:nth-child(3) {
-  animation-delay: 0.4s;
+.section__card .card__container .menu__btn {
+  animation-name: slide;
+  animation-delay: 0.8s;
+  animation-duration: 2s;
 }
 
 @keyframes slide {
   0% {
     opacity: 0;
-    margin-top: 5px;
-    margin-bottom: 0px;
+    margin-top: 70%;
   }
   50% {
+    opacity: 0.2;
+    margin-top: 50%;
+  }
+  70% {
+    margin-top: 30%;
     opacity: 0.5;
-    margin-top: 2.5px;
-    margin-bottom: 2.5px;
   }
   100% {
     opacity: 1;
-    margin-top: 0px;
-    margin-bottom: 5px;
+    margin-top: 0%;
   }
 }
 @media only screen and (min-width: 992px) {
+  .header__img img {
+    width: 355px;
+  }
+
   .arrow {
     margin-top: 1%;
+  }
+
+  .Exploration__title h1 {
+    font-size: 30px;
+  }
+  .Exploration__title h3 {
+    font-size: 20px;
+  }
+
+  .Explication h1 {
+    font-size: 30px;
+    text-align: center;
   }
 
   .Restaurants h1 {
