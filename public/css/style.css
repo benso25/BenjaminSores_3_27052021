@@ -35,7 +35,6 @@
     opacity: 0;
     visibility: hidden;
     z-index: -2;
-    transform: translateX(-1000px);
   }
 }
 .page_content {
