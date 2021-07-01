@@ -18,17 +18,16 @@ $dark: #353535;
 .Loader {
     border: 5px solid $colour-primary;
     border-top: 5px solid $colour-secondary;
+    border-bottom: 5px solid $color-third;
     border-radius: 50%;
     width: 120px;
     height: 120px;
     animation: spin linear 4s;
     z-index: 100;
-    margin: auto;
+    // margin: auto;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    right:50%;
-    bottom: 50%;
+    top: 43vh;
+    left: 37vw;
     visibility: hidden;
   }
   
@@ -48,7 +47,7 @@ $dark: #353535;
         opacity: 0;
         visibility: hidden;
         z-index: -2;
-        transform: translateX(-1000px) 0s;
+        transform: translateX(-1000px);
      }
   }
 
@@ -128,7 +127,7 @@ $dark: #353535;
     padding-bottom: 10px;
     padding-top: 10px;
     .Exploration__title{
-        h1 {
+        h2 {
             text-align: center;
             justify-content: center;
             padding: 0 80px;
@@ -168,7 +167,7 @@ $dark: #353535;
 
 .Explication {
     font-family: 'Roboto', sans-serif;
-    h1 {
+    h2 {
         padding: 30px 20px 20px;
     }
     .Explication__choix {
@@ -219,7 +218,7 @@ $dark: #353535;
     font-family: 'Roboto', sans-serif;
     background-color: $light;
     margin-bottom: 30px;
-    h1 {
+    h2 {
         padding: 30px 20px 0;
     }
         .Restaurants__container {
@@ -618,8 +617,23 @@ footer {
     
 
                                                         //Version Responsive
+    
 
+    @media only screen and (min-width: 768px) {
+        .Loader{
+            top: 43vh;
+            left: 42vw;
+        }
+    }
+        
+    
     @media only screen and (min-width: 992px) {
+
+        .Loader{
+            top: 45vh;
+            left: 45vw;
+        }
+
         .header__img{
             img{
             width: 355px;
@@ -631,7 +645,7 @@ footer {
         }
         
         .Exploration__title{
-            h1{
+            h2{
                 font-size: 30px;
             }
             h3{
@@ -640,14 +654,14 @@ footer {
         }
 
         .Explication{
-            h1{
+            h2{
                 font-size: 30px;
                 text-align: center;
             }
         }
 
         .Restaurants{
-            h1 {
+            h2 {
                 padding-bottom: 15px;
                 text-align: center;
                 font-size: 30px;
